@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Mi Block Personal</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><Ri:a>Roni Omar</Ri:a></a>
+
+        <nav>
+            <a href="#" class="active"> Inicio</a>
+            <a href="#" onclick="openServicesModal()">Servicios</a>
+            <a href="#" onclick="openSkillsModal()">Habilidades</a>
+            <a href="#" onclick="openEducationModal()">Educacion</a>
+            <a href="#" onclick="openExperienceModal()">experiencia</a>
+            <a href="#" onclick="openModal()">Contacto</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Roni Omar</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Ingeniero de Sistemas que convierte cafés en código y código en experiencias digitales 
+                extraordinarias. Especializado en desarrollo web full stack, transformo visiones empresariales
+                 en aplicaciones innovadoras que marcan la diferencia. Cada proyecto es una oportunidad 
+                para demostrar que la tecnología, cuando se hace bien, puede cambiar el mundo.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <a href="#" class="btn" onclick="openModal()">Contáctame</a>
+        </div>
+    </section>
+
+    <!-- Modal de Educación -->
+    <div class="modal-overlay" id="educationModalOverlay" onclick="closeEducationModalOnOutsideClick(event)">
+        <div class="education-modal-container" id="educationModalContainer">
+            <button class="close-button" onclick="closeEducationModal()">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Formación Académica</h2>
+                <p>Trayectoria educativa y certificaciones profesionales</p>
+            </div>
+
+            <!-- Timeline de educación -->
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>2020 - 2024</span>
+                        </div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>Ingeniería de Sistemas</h3>
+                                <h4>Universidad Nacional de Trujillo</h4>
+                                <p class="education-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Trujillo, La Libertad, Perú
+                                </p>
+                                <p class="education-description">
+                                    Formación integral en desarrollo de software, arquitectura de sistemas, bases de datos, redes computacionales y gestión de proyectos tecnológicos. Especialización en desarrollo web y aplicaciones empresariales.
+                                </p>
+                                <div class="education-achievements">
+                                    <span class="achievement-badge">
+                                        <i class="fas fa-trophy"></i>
+                                        Promedio: 16.5/20
+                                    </span>
+                                    <span class="achievement-badge">
+                                        <i class="fas fa-award"></i>
+                                        Mejor proyecto de tesis
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>2023</span>
+                        </div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>Full Stack Web Development</h3>
+                                <h4>Platzi</h4>
+                                <p class="education-location">
+                                    <i class="fas fa-globe"></i>
+                                    Plataforma Online
+                                </p>
+                                <p class="education-description">
+                                    Programa intensivo de desarrollo web full stack que abarca tecnologías frontend (React, HTML5, CSS3, JavaScript) y backend (Node.js, Express, MongoDB), con énfasis en arquitecturas escalables y mejores prácticas de la industria.
+                                </p>
+                                <div class="education-achievements">
+                                    <span class="achievement-badge">
+                                        <i class="fas fa-clock"></i>
+                                        200+ horas
+                                    </span>
+                                    <span class="achievement-badge">
+                                        <i class="fas fa-project-diagram"></i>
+                                        15 proyectos
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>2022</span>
+                        </div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>Python para Data Science</h3>
+                                <h4>Coursera - IBM</h4>
+                                <p class="education-location">
+                                    <i class="fas fa-globe"></i>
+                                    Plataforma Online
+                                </p>
+                                <p class="education-description">
+                                    Certificación profesional en análisis de datos con Python, incluyendo pandas, numpy, matplotlib y scikit-learn. Desarrollo de proyectos de análisis predictivo y visualización de datos complejos.
+                                </p>
+                                <div class="education-achievements">
+                                    <span class="achievement-badge">
+                                        <i class="fas fa-star"></i>
+                                        Certificado verificado
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>2021</span>
+                        </div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>Responsive Web Design</h3>
+                                <h4>freeCodeCamp</h4>
+                                <p class="education-location">
+                                    <i class="fas fa-globe"></i>
+                                    Plataforma Online
+                                </p>
+                                <p class="education-description">
+                                    Certificación en diseño web responsivo, cubriendo HTML5, CSS3, Flexbox, CSS Grid, y principios de accesibilidad web. Desarrollo de proyectos prácticos aplicando metodologías mobile-first.
+                                </p>
+                                <div class="education-achievements">
+                                    <span class="achievement-badge">
+                                        <i class="fas fa-code"></i>
+                                        300+ horas de práctica
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificaciones adicionales -->
+            <div class="certifications-section">
+                <h3 class="section-title">
+                    <i class="fas fa-award"></i>
+                    Certificaciones Adicionales
+                </h3>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <i class="fab fa-git-alt"></i>
+                        <h4>Git & GitHub</h4>
+                        <p>Control de versiones</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fab fa-docker"></i>
+                        <h4>Docker Basics</h4>
+                        <p>Contenedores</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-database"></i>
+                        <h4>SQL Avanzado</h4>
+                        <p>Bases de datos</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Ciberseguridad</h4>
+                        <p>Fundamentos</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fab fa-react"></i>
+                        <h4>React Avanzado</h4>
+                        <p>Frontend Framework</p>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>App Development</h4>
+                        <p>Mobile Apps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Experiencia -->
+    <div class="modal-overlay" id="experienceModalOverlay" onclick="closeExperienceModalOnOutsideClick(event)">
+        <div class="experience-modal-container" id="experienceModalContainer">
+            <button class="close-button" onclick="closeExperienceModal()">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Experiencia Profesional</h2>
+                <p>Trayectoria laboral y proyectos destacados</p>
+            </div>
+
+            <!-- Timeline de experiencia -->
+            <div class="experience-timeline">
+                <div class="exp-timeline-item">
+                    <div class="exp-timeline-dot"></div>
+                    <div class="exp-timeline-content">
+                        <div class="exp-date-badge">
+                            <i class="fas fa-calendar"></i>
+                            <span>Ene 2023 - Actualidad</span>
+                        </div>
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <div class="exp-company-logo">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="exp-title-section">
+                                    <h3>Desarrollador Full Stack</h3>
+                                    <h4>TechSolutions S.A.C.</h4>
+                                    <p class="exp-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Trujillo, Perú
+                                    </p>
+                                </div>
+                                <div class="exp-status">
+                                    <span class="status-badge current">Actual</span>
+                                </div>
+                            </div>
+                            <div class="exp-description">
+                                <p>Desarrollo y mantenimiento de aplicaciones web empresariales utilizando tecnologías modernas. Liderazgo técnico en proyectos de transformación digital para clientes del sector retail y financiero.</p>
+                            </div>
+                            <div class="exp-responsibilities">
+                                <h5><i class="fas fa-tasks"></i> Responsabilidades principales:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Desarrollo de aplicaciones web con React y Node.js</li>
+                                    <li><i class="fas fa-check-circle"></i> Diseño e implementación de APIs RESTful escalables</li>
+                                    <li><i class="fas fa-check-circle"></i> Optimización de bases de datos MySQL y MongoDB</li>
+                                    <li><i class="fas fa-check-circle"></i> Implementación de metodologías ágiles (Scrum)</li>
+                                    <li><i class="fas fa-check-circle"></i> Mentoría a desarrolladores junior</li>
+                                </ul>
+                            </div>
+                            <div class="exp-technologies">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-timeline-item">
+                    <div class="exp-timeline-dot"></div>
+                    <div class="exp-timeline-content">
+                        <div class="exp-date-badge">
+                            <i class="fas fa-calendar"></i>
+                            <span>Jul 2022 - Dic 2022</span>
+                        </div>
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <div class="exp-company-logo">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="exp-title-section">
+                                    <h3>Desarrollador Frontend</h3>
+                                    <h4>WebCreative Agency</h4>
+                                    <p class="exp-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Lima, Perú (Remoto)
+                                    </p>
+                                </div>
+                                <div class="exp-status">
+                                    <span class="status-badge">6 meses</span>
+                                </div>
+                            </div>
+                            <div class="exp-description">
+                                <p>Desarrollo de interfaces de usuario modernas y responsivas para diversos clientes corporativos. Colaboración estrecha con equipos de diseño UX/UI para implementar experiencias visuales excepcionales.</p>
+                            </div>
+                            <div class="exp-responsibilities">
+                                <h5><i class="fas fa-tasks"></i> Responsabilidades principales:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Desarrollo de landing pages con HTML5, CSS3 y JavaScript</li>
+                                    <li><i class="fas fa-check-circle"></i> Implementación de diseños responsivos mobile-first</li>
+                                    <li><i class="fas fa-check-circle"></i> Optimización de rendimiento web (SEO, velocidad de carga)</li>
+                                    <li><i class="fas fa-check-circle"></i> Integración con APIs de terceros</li>
+                                </ul>
+                            </div>
+                            <div class="exp-technologies">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-timeline-item">
+                    <div class="exp-timeline-dot"></div>
+                    <div class="exp-timeline-content">
+                        <div class="exp-date-badge">
+                            <i class="fas fa-calendar"></i>
+                            <span>Ene 2022 - Jun 2022</span>
+                        </div>
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <div class="exp-company-logo">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="exp-title-section">
+                                    <h3>Practicante de Desarrollo Web</h3>
+                                    <h4>StartUp Innovación Digital</h4>
+                                    <p class="exp-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Trujillo, Perú
+                                    </p>
+                                </div>
+                                <div class="exp-status">
+                                    <span class="status-badge">6 meses</span>
+                                </div>
+                            </div>
+                            <div class="exp-description">
+                                <p>Práctica profesional enfocada en el desarrollo de aplicaciones web para pequeñas y medianas empresas. Aprendizaje intensivo de metodologías de desarrollo ágil y mejores prácticas de programación.</p>
+                            </div>
+                            <div class="exp-responsibilities">
+                                <h5><i class="fas fa-tasks"></i> Responsabilidades principales:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Asistencia en desarrollo de módulos frontend</li>
+                                    <li><i class="fas fa-check-circle"></i> Mantenimiento y actualización de sitios web existentes</li>
+                                    <li><i class="fas fa-check-circle"></i> Testing y debugging de aplicaciones</li>
+                                    <li><i class="fas fa-check-circle"></i> Documentación técnica de código</li>
+                                </ul>
+                            </div>
+                            <div class="exp-technologies">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">jQuery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyectos destacados -->
+            <div class="projects-section">
+                <h3 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Proyectos Destacados
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-info">
+                            <h4>E-Commerce Platform</h4>
+                            <p>Plataforma completa de comercio electrónico con panel administrativo, carrito de compras y pasarela de pagos.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-info">
+                            <h4>Task Management App</h4>
+                            <p>Aplicación de gestión de tareas colaborativa con funcionalidades en tiempo real y notificaciones.</p>
+                            <div class="project-tags">
+                                <span>Vue.js</span>
+                                <span>Firebase</span>
+                                <span>Socket.io</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-info">
+                            <h4>Analytics Dashboard</h4>
+                            <p>Dashboard interactivo para visualización de datos empresariales con gráficos dinámicos y reportes.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>D3.js</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Habilidades -->
+    <div class="modal-overlay" id="skillsModalOverlay" onclick="closeSkillsModalOnOutsideClick(event)">
+        <div class="skills-modal-container" id="skillsModalContainer">
+            <button class="close-button" onclick="closeSkillsModal()">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Habilidades Técnicas</h2>
+                <p>Dominio y experiencia en tecnologías modernas</p>
+            </div>
+
+            <!-- Tabs de categorías -->
+            <div class="skills-tabs">
+                <button class="skill-tab active" onclick="changeSkillTab(event, 'frontend')">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Frontend</span>
+                </button>
+                <button class="skill-tab" onclick="changeSkillTab(event, 'backend')">
+                    <i class="fas fa-server"></i>
+                    <span>Backend</span>
+                </button>
+                <button class="skill-tab" onclick="changeSkillTab(event, 'tools')">
+                    <i class="fas fa-tools"></i>
+                    <span>Herramientas</span>
+                </button>
+                <button class="skill-tab" onclick="changeSkillTab(event, 'soft')">
+                    <i class="fas fa-brain"></i>
+                    <span>Soft Skills</span>
+                </button>
+            </div>
+
+            <!-- Frontend Skills -->
+            <div id="frontend" class="skill-content active">
+                <div class="skills-grid-advanced">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>HTML5</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="95"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>CSS3</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="92"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>JavaScript</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>React</h4>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-sass"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Sass/SCSS</h4>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="80"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Bootstrap</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools Skills -->
+            <div id="tools" class="skill-content">
+                <div class="skills-grid-advanced">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Git</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>GitHub</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="92"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Figma</h4>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <span class="skill-percentage">83%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="83"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>VS Code</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="95"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Docker</h4>
+                                <span class="skill-level">Básico</span>
+                            </div>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="65"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-npm"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>NPM</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div id="soft" class="skill-content">
+                <div class="soft-skills-container">
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Trabajo en Equipo</h4>
+                        <p>Capacidad demostrada para colaborar efectivamente en equipos multidisciplinarios y ambientes ágiles.</p>
+                        <div class="skill-badge">Excelente</div>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Comunicación</h4>
+                        <p>Habilidad para transmitir ideas técnicas de manera clara a audiencias técnicas y no técnicas.</p>
+                        <div class="skill-badge">Excelente</div>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Resolución de Problemas</h4>
+                        <p>Enfoque analítico y creativo para identificar soluciones efectivas ante desafíos complejos.</p>
+                        <div class="skill-badge">Sobresaliente</div>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Gestión del Tiempo</h4>
+                        <p>Organización eficiente de tareas y cumplimiento consistente de plazos establecidos.</p>
+                        <div class="skill-badge">Muy Bueno</div>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Aprendizaje Continuo</h4>
+                        <p>Compromiso constante con la actualización tecnológica y adquisición de nuevas competencias.</p>
+                        <div class="skill-badge">Sobresaliente</div>
+                    </div>
+
+                    <div class="soft-skill-card">
+                        <div class="soft-skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Adaptabilidad</h4>
+                        <p>Flexibilidad para ajustarse a nuevos entornos, tecnologías y metodologías de trabajo.</p>
+                        <div class="skill-badge">Excelente</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estadísticas generales -->
+            <div class="skills-stats">
+                <div class="stat-item">
+                    <i class="fas fa-code"></i>
+                    <h3>15+</h3>
+                    <p>Tecnologías Dominadas</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>30+</h3>
+                    <p>Proyectos Completados</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>5000+</h3>
+                    <p>Horas de Código</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <h3>8+</h3>
+                    <p>Certificaciones</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Servicios -->
+    <div class="modal-overlay" id="servicesModalOverlay" onclick="closeServicesModalOnOutsideClick(event)">
+        <div class="services-modal-container" id="servicesModalContainer">
+            <button class="close-button" onclick="closeServicesModal()">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Mis Servicios</h2>
+                <p>Soluciones tecnológicas profesionales</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Creación de sitios web modernos, responsivos y optimizados con las últimas tecnologías front-end y back-end.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> HTML5, CSS3, JavaScript</li>
+                        <li><i class="fas fa-check"></i> React, Node.js</li>
+                        <li><i class="fas fa-check"></i> Diseño responsivo</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Aplicaciones Móviles</h3>
+                    <p>Desarrollo de aplicaciones móviles nativas y multiplataforma para iOS y Android.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> React Native</li>
+                        <li><i class="fas fa-check"></i> Flutter</li>
+                        <li><i class="fas fa-check"></i> UI/UX optimizado</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Diseño UI/UX</h3>
+                    <p>Diseño de interfaces intuitivas y experiencias de usuario excepcionales centradas en las necesidades del cliente.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Wireframing & Prototyping</li>
+                        <li><i class="fas fa-check"></i> Diseño visual</li>
+                        <li><i class="fas fa-check"></i> Testing de usabilidad</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Gestión de Bases de Datos</h3>
+                    <p>Diseño, implementación y optimización de bases de datos relacionales y NoSQL.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> MySQL, PostgreSQL</li>
+                        <li><i class="fas fa-check"></i> MongoDB, Firebase</li>
+                        <li><i class="fas fa-check"></i> Optimización de queries</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Informática</h3>
+                    <p>Auditorías de seguridad, implementación de protocolos y protección de sistemas informáticos.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Análisis de vulnerabilidades</li>
+                        <li><i class="fas fa-check"></i> Implementación SSL/TLS</li>
+                        <li><i class="fas fa-check"></i> Consultoría en seguridad</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Mantenimiento & Soporte</h3>
+                    <p>Soporte técnico continuo, actualizaciones y mantenimiento de sistemas existentes.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Monitoreo 24/7</li>
+                        <li><i class="fas fa-check"></i> Actualizaciones regulares</li>
+                        <li><i class="fas fa-check"></i> Resolución de incidencias</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="services-cta">
+                <p>¿Interesado en alguno de estos servicios?</p>
+                <button class="cta-button" onclick="closeServicesModal(); openModal();">
+                    <i class="fas fa-envelope"></i> Solicitar Cotización
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Contacto -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOutsideClick(event)">
+        <div class="modal-container" id="modalContainer">
+            <button class="close-button" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Contáctame</h2>
+                <p>Elige tu método de contacto preferido</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <div class="contact-buttons">
+                    <button type="submit" class="contact-btn">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                        Enviar Email
+                    </button>
+                    <button type="button" class="contact-btn whatsapp-btn" onclick="sendWhatsApp()">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Vinculación del archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Skills -->
+            <div id="backend" class="skill-content">
+                <div class="skills-grid-advanced">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Node.js</h4>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <span class="skill-percentage">82%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="82"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">87%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="87"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>PHP</h4>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <span class="skill-percentage">78%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="78"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>MySQL</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>MongoDB</h4>
+                                <span class="skill-level">Intermedio</span>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="75"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>API REST</h4>
+                                <span class="skill-level">Avanzado</span>
+                            </div>
+                            <span class="skill-percentage">88%</span>
