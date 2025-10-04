@@ -10,17 +10,22 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo"><Ri:a>Roni Omar</Ri:a></a>
+    <a href="#" class="logo"><Ri:a>Roni Omar</Ri:a></a>
 
-        <nav>
-            <a href="#" class="active"> Inicio</a>
-            <a href="#" onclick="openServicesModal()">Servicios</a>
-            <a href="#" onclick="openSkillsModal()">Habilidades</a>
-            <a href="#" onclick="openEducationModal()">Educacion</a>
-            <a href="#" onclick="openExperienceModal()">experiencia</a>
-            <a href="#" onclick="openModal()">Contacto</a>
-        </nav>
-    </header>
+    <!-- Botón hamburguesa para móvil -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navbar">
+        <a href="#" class="active"> Inicio</a>
+        <a href="#" onclick="openServicesModal()">Servicios</a>
+        <a href="#" onclick="openSkillsModal()">Habilidades</a>
+        <a href="#" onclick="openEducationModal()">Educacion</a>
+        <a href="#" onclick="openExperienceModal()">experiencia</a>
+        <a href="#" onclick="openModal()">Contacto</a>
+    </nav>
+</header>
     <section class="home">
         <div class="home-img">
             <img src="main.jpg" alt="">
