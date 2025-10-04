@@ -615,3 +615,46 @@ console.log('%c🚀 Portfolio Personal - Roni Omar', 'color: #b74b4b; font-size:
 console.log('%c💻 Desarrollado con pasión y dedicación', 'color: #d45a5a; font-size: 14px;');
 console.log('%c📧 Contacto: tu_email@ejemplo.com', 'color: #888; font-size: 12px;');
 console.log('%c' + '='.repeat(50), 'color: #b74b4b;');
+
+
+// ========== MENÚ HAMBURGUESA MÓVIL ==========
+
+const menuToggle = document.getElementById('menuToggle');
+const navbar = document.getElementById('navbar');
+
+if (menuToggle && navbar) {
+    menuToggle.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+        
+        // Cambiar icono entre hamburguesa y X
+        const icon = this.querySelector('i');
+        if (navbar.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    const navLinks = navbar.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navbar.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener('click', function(event) {
+        if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+            navbar.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
