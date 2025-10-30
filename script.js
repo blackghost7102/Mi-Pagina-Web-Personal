@@ -23,7 +23,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const message = document.getElementById('message').value;
     
     // IMPORTANTE: Reemplaza con tu dirección de email
-    const mailtoLink = `mailto:tu_email@ejemplo.com?subject=Contacto de ${encodeURIComponent(name)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)}`;
+    const mailtoLink = `mailto:roniomar7102gmail.com?subject=Contacto de ${encodeURIComponent(name)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)}`;
     
     window.location.href = mailtoLink;
     
@@ -193,7 +193,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const message = document.getElementById('message').value;
     
     // IMPORTANTE: Reemplaza con tu dirección de email
-    const mailtoLink = `mailto:tu_email@ejemplo.com?subject=Contacto de ${encodeURIComponent(name)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)}`;
+    const mailtoLink = `roniomar7102gmail.com?subject=Contacto de ${encodeURIComponent(name)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)}`;
     
     window.location.href = mailtoLink;
     
@@ -207,7 +207,7 @@ function sendWhatsApp() {
     const message = document.getElementById('message').value;
     
     // IMPORTANTE: Reemplaza con tu número de WhatsApp (formato internacional sin +)
-    const phoneNumber = '51999999999';
+    const phoneNumber = '51957711767';
     const whatsappMessage = `Hola, soy ${name}. ${message}`;
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     
@@ -658,3 +658,4 @@ if (menuToggle && navbar) {
         }
     });
 }
+
